@@ -1,0 +1,28 @@
+{
+  "name": "the-odin-project-page",
+  "version": "1.0.0",
+  "description": "The odin project home page",
+  "scripts": {
+    "sass": "sass scss/main.scss public/styles/main.css",
+    "sass-watch": "sass --watch scss/main.scss public/styles/main.css",
+    "sass-build": "sass scss/main.scss public/styles/main.min.css  --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorashs/the-odin-project-page.git"
+  },
+  "keywords": [
+    "sass",
+    "gridlay",
+    "responsive"
+  ],
+  "author": "Igorashs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igorashs/the-odin-project-page/issues"
+  },
+  "homepage": "https://github.com/igorashs/the-odin-project-page#readme",
+  "devDependencies": {
+    "sass": "^1.26.2"
+  }
+}
