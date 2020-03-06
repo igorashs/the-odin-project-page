@@ -12,6 +12,11 @@ $h-color: #4a4a4a;
   src: url('/public/fonts/Norsebold.otf');
 }
 
+@font-face {
+  font-family: 'Genericons';
+  src: url('/public/fonts/Genericons.woff');
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: $primary-color;
