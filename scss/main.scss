@@ -3,6 +3,7 @@
 $odin-font: 'Nurse';
 $odin-color: #cc9543;
 $primary-color: #4a4a4ab3;
+$btn-primary: #6abfc3;
 
 @font-face {
   font-family: 'Nurse';
@@ -24,7 +25,24 @@ a {
   background: none;
 }
 
-// main header
+%btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+
+  @media (min-width: 768px) {
+    padding: 1rem 3.5rem;
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+  background-color: $btn-primary;
+}
+
 .odin-text {
   padding-left: 12px;
   font-size: 1.5rem;
@@ -34,8 +52,10 @@ a {
   color: $odin-color;
 }
 
+// main header
 .main-header {
   padding: 5px 20px;
+  margin-bottom: 30px;
 
   .logo {
     height: 60px;
@@ -43,6 +63,7 @@ a {
 
   @media (min-width: 768px) {
     padding-top: 12px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: 1037px) {
@@ -99,4 +120,111 @@ a {
   background-image: url(data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%270%200%2032%2032%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20stroke%3D%27%236abfc3%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-miterlimit%3D%2710%27%20d%3D%27M4%208h24M4%2016h24M4%2024h24%27%2F%3E%3C%2Fsvg%3E);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+// main
+.gradient {
+  background-image: linear-gradient(to bottom, #fff, #eee);
+}
+
+main {
+  text-align: center;
+
+  h1 {
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 2.25rem;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    color: $odin-color;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.88;
+    letter-spacing: 0.2px;
+  }
+
+  .wrapper header {
+    padding-bottom: 60px;
+  }
+
+  .wrapper header p {
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: 576px) {
+    h1 {
+      padding: 0 5.5rem;
+    }
+  }
+}
+
+.about-section {
+  max-width: 1080px;
+  margin: 0 auto;
+
+  padding-top: 60px;
+  $h-color: #4a4a4a;
+
+  %heading-color {
+    color: $h-color;
+  }
+
+  header {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    padding-bottom: 65px;
+  }
+
+  h2 {
+    padding-bottom: 50px;
+    @extend %heading-color;
+  }
+
+  h3 {
+    margin: 50px 0 20px;
+    font-size: 1.125rem;
+    @extend %heading-color;
+  }
+
+  .about-articles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  article {
+    margin-bottom: 30px;
+    padding: 0 42px;
+  }
+
+  img {
+    height: 80px;
+  }
+
+  @media (min-width: 480px) {
+    article {
+      padding: 0 84px;
+    }
+
+    img {
+      height: 120px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 90px;
+
+    header {
+      padding-bottom: 120px;
+    }
+
+    article {
+      padding: 0 1rem;
+
+      img {
+        height: 165px;
+      }
+    }
+  }
 }
