@@ -6,3 +6,7 @@
 ## Assignment
 
 > Clone [The Odin Project Home Page](https://www.theodinproject.com/home) using my own grid-based framework.
+
+## License
+
+This project is licensed under the MIT License
